@@ -1,7 +1,8 @@
 ''' Build a dataframe in pandas '''
-import pandas as pd
-import matplotlib.pyplot as plt
 import os
+
+import matplotlib.pyplot as plt
+import pandas as pd
 
 
 def test_run():
@@ -10,7 +11,7 @@ def test_run():
         pd.date_range('2010-01-01', '2010-12-31')
     )
 
-    plot_data(normilise_data(df.iloc[::-1]))
+    plot_data(normilise_data(df))
 
     print df.ix['2010-03-15': '2010-03-10', ['SPY', 'IBM']].iloc[::-1]
 
@@ -24,7 +25,7 @@ def get_data(symbols, dates):
         # Using inner we can drop holidays (NaN)
         data_frame = data_frame.join(df_temp, how='inner')
 
-    return data_frame
+    return data_frame.iloc[::-1]
 
 
 def read_symbol(symbol):

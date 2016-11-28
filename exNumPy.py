@@ -21,7 +21,6 @@ def test_run():
 
     array_attributes(np.random.random((5, 4)))
     operations()
-    performance()
 
 
 def array_attributes(a):
