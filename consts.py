@@ -1,0 +1,4 @@
+GLD = 'GLD'
+GOOG = 'GOOG'
+SPY = 'SPY'
+XOM = 'XOM'
